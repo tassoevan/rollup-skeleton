@@ -1,13 +1,16 @@
 {
-  "name": "rollup-skeleton",
-  "version": "1.0.0",
-  "description": "ES6 application with Rollup skeleton",
+  "name": "my-project",
+  "version": "0.0.0",
+  "description": "My project description",
+  "author": "My Name <mymail@example.com>",
+  "license": "MIT",
+
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "rollup -c rollup.config.js",
+    "bundle-watch": "rollup -w -c rollup.config.js"
   },
-  "author": "Tasso Evangelista <tasso@tassoevan.me>",
-  "license": "MIT",
   "devDependencies": {
     "babel-preset-es2015-rollup": "^1.2.0",
     "rollup": "^0.34.10",
@@ -16,8 +19,5 @@
     "rollup-plugin-json": "^2.0.1",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-watch": "^2.5.0"
-  },
-  "dependencies": {
-    "colors": "^1.1.2"
   }
 }

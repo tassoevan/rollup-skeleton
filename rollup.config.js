@@ -13,9 +13,18 @@ export default {
         }),
         json(),
         commonjs({
-            include: 'node_modules/**'
+            include: [
+                'node_modules/**',
+                'src/**'
+            ]
         }),
         babel(),
     ],
-    dest: 'dist/index.js'
+    targets: [
+        { dest: 'dist/index.cjs.js', format: 'cjs' },
+        {
+            moduleName: 'index',
+            dest: 'dist/index.js', format: 'iife'
+        }
+    ]
 };

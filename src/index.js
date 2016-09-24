@@ -1,3 +1,10 @@
-import colors from 'colors';
+const logger = require('./logger');
 
-console.log('Hello, world!'.green);
+class MyApp {
+    run() {
+        logger('Running!');
+    }
+}
+
+let app = new MyApp();
+app.run();
